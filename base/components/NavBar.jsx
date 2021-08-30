@@ -89,11 +89,12 @@ const DefaultNavGuts = ({pageLinks, currentPage, children, homelink, isOpen, tog
  */
 const NavBar = ({NavGuts = DefaultNavGuts, ...props}) => {
 	// allow other bits of code (i.e. pages below MainDiv) to poke at the navbar
+		
 	const navProps = getNavProps();
 	if (navProps) {
 		props = Object.assign({}, props, navProps);
 	}
-	let {currentPage, pages, labels, externalLinks, darkTheme, backgroundColour} = props; // ??This de-ref, and the pass-down of props to NavGuts feels clumsy/opaque
+	let {currentPage, pages, labels, externalLinks, darkTheme, backgroundColour, children} = props; // ??This de-ref, and the pass-down of props to NavGuts feels clumsy/opaque
 	const labelFn = labeller(pages, labels);
 
 	// Handle nav toggling

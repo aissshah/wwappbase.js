@@ -170,6 +170,7 @@ class MainDivBase extends Component {
 			homelink={homeLink}
             darkTheme={navbarDarkTheme}
             backgroundColour={navbarBackgroundColour}
+			children={navbarChildren}
           ></NavBar>
         ) : null}
         <Container fluid={fluid}>
